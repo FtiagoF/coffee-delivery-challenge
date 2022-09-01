@@ -7,6 +7,12 @@ export const HeaderContainer = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    
+    nav {
+        display: flex;
+        gap: 0.75rem;
+    }
 `;
 
 const BaseHeaderButton = styled.button`
@@ -17,6 +23,7 @@ const BaseHeaderButton = styled.button`
     justify-content: center;
     align-items: center;
     gap: 0.25rem;
+    font-size: 0.875rem;
 `;
 
 export const LocationButton = styled(BaseHeaderButton)`
