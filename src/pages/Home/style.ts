@@ -7,27 +7,34 @@ export const HomeContainer = styled.main`
 export const BackgroundImage = styled.div`
     top: 6.5rem;
     width: 100%;
-    height: 34rem;
+    height: 40rem;
     background-image: url('../src/assets/Background.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
-    filter: blur(50px)
+    filter: blur(35px)
 `;
 
 export const IntroductionSection = styled.section`
     top: 6.5rem;
-    height: 34rem;
+    height: 40rem;
+    width: 100%;
     position: absolute;
     padding: 6.75rem 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+`;
 
-    img {
-        width: 45%;
-    }
+export const LogoImage = styled.div`
+    width: 40%;
+    height: 100%;
+    flex: 1;
+    background-image: url('../src/assets/Imagem.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;  
 `;
 
 export const IntroductionContent = styled.div`
@@ -41,6 +48,9 @@ export const IntroductionContent = styled.div`
 
 export const Title = styled.div`
     color: ${props => props.theme['base-title']};
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 
     & > * {
         line-height: 130%;

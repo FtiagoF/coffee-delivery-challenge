@@ -1,4 +1,4 @@
-import { BackgroundImage, HomeContainer, IntroductionContent, IntroductionSection, Itens, Title } from "./style";
+import { BackgroundImage, HomeContainer, IntroductionContent, IntroductionSection, Itens, LogoImage, Title } from "./style";
 
 export function Home() {
     return (
@@ -8,7 +8,7 @@ export function Home() {
                 <IntroductionSection>
                     <IntroductionContent>
                         <Title>
-                            <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+                            <h1>Encontre o café perfeito <br /> para qualquer hora do dia</h1>
                             <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
                         </Title>
 
@@ -21,7 +21,7 @@ export function Home() {
                             </ul>
                         </Itens>
                     </IntroductionContent>
-                    <img src="../src/assets/Imagem.svg" alt="" />
+                    <LogoImage></LogoImage>
 
                 </IntroductionSection>
             </div>
