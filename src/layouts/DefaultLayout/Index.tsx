@@ -1,5 +1,8 @@
+
+import { Header } from '../../components/Header/Index'
+
 export function DefaultLayout() {
     return(
-        <h1>Hello Word</h1>
+        <Header />
     )
 }
