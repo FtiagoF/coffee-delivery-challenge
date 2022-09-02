@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
     width: 100%;
-    padding: 2rem 10rem;
-    background-color: ${props => props.theme['background']};
+    padding: 2rem 15rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,6 +23,7 @@ const BaseHeaderButton = styled.button`
     align-items: center;
     gap: 0.25rem;
     font-size: 0.875rem;
+    cursor: pointer;
 `;
 
 export const LocationButton = styled(BaseHeaderButton)`
