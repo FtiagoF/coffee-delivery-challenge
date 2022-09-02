@@ -12,7 +12,7 @@ export const BackgroundImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(35px);
+  filter: blur(50px);
 `;
 
 export const IntroductionSection = styled.section`
@@ -54,7 +54,7 @@ export const Title = styled.div`
 
   h1 {
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: "Baloo 2", cursive;
     line-height: 130%;
   }
