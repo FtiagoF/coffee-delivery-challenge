@@ -38,6 +38,7 @@ export const CardHeader = styled.div`
     background: ${(props) => props.theme["yellow-light"]};
     color: ${(props) => props.theme["yellow-dark"]};
     border-radius: 100px;
+    text-transform: uppercase;
   }
   img {
     width: 7.5rem;

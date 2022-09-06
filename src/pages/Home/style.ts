@@ -113,6 +113,6 @@ export const CoffeeSection = styled.section`
 
 export const CoffeeList = styled.div`
   display: grid;
-  grid-gap: 2.5rem ;
+  grid-gap: 3rem ;
   grid-template: auto / repeat(auto-fit, minmax(16rem, 1fr));
 `;

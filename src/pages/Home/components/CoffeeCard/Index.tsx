@@ -1,18 +1,23 @@
 import { CardContainer, CardFooter, CardHeader, Counter } from "./style";
-import coffee from "../../../../assets/Coffees/Expresso.svg";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { CoffeeType } from "../../Coffees/Coffee";
 
-export function CoffeeCard() {
+
+export function CoffeeCard({description, name, picture, price, tag}: CoffeeType) {
+  console.log(tag);
+  
   return (
     <CardContainer>
       <CardHeader>
-        <img src={coffee} alt="" />
-        <span>TRADICIONAL</span>
+        <img src={`../../../src/assets/Coffees/${picture}`} alt="" />
+        <span>{tag}</span>
       </CardHeader>
-      <h1>Expresso Tradicional</h1>
-      <p>O tradicional café feito com água quente e grãos moídos</p>
+      <h1>{name}</h1>
+      <p>{description}</p>
       <CardFooter>
-        <span>9,90</span>
+        <span>
+          {`${String(price).split('.')[0]}.${String(price).split('.')[1].padEnd(2,'0')}`}
+        </span>
         <form>
           <Counter>
             <button aria-hidden="true">

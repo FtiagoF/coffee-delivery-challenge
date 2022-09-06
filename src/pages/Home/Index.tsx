@@ -1,4 +1,5 @@
 import { Coffee, Package, ShoppingCartSimple, Timer } from "phosphor-react";
+import { Coffees } from "./Coffees/Coffee";
 import { CoffeeCard } from "./components/CoffeeCard/Index";
 import { BackgroundImage, CoffeeList, CoffeeSection, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
 
@@ -29,11 +30,16 @@ export function Home() {
                     <h2>Nossos cafés</h2>
             
                     <CoffeeList>
-                        <CoffeeCard />
-                        <CoffeeCard />
-                        <CoffeeCard />
-                        <CoffeeCard />
-                        <CoffeeCard />
+                        {Coffees.map(coffee => (
+                            <CoffeeCard 
+                                key={coffee.name}
+                                description={coffee.description}
+                                name={coffee.name}
+                                picture={coffee.picture}
+                                price={coffee.price}
+                                tag={coffee.tag}
+                            />
+                        ))}
                         
                     </CoffeeList>
 
