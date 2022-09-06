@@ -1,10 +1,10 @@
 import { Coffee, Package, ShoppingCartSimple, Timer } from "phosphor-react";
-import { BackgroundImage, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
+import { CoffeeCard } from "./components/CoffeeCard/Index";
+import { BackgroundImage, CoffeeSection, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
 
 export function Home() {
     return (
         <HomeContainer>
-            <div>
                 <BackgroundImage></BackgroundImage>
                 <IntroductionSection>
                     <IntroductionContent>
@@ -25,9 +25,12 @@ export function Home() {
                     <LogoImage></LogoImage>
 
                 </IntroductionSection>
-            </div>
+                <CoffeeSection>
+                    <CoffeeCard />
 
+                    
 
+                </CoffeeSection>
         </HomeContainer>
     )
 }

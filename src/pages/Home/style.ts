@@ -1,22 +1,23 @@
 import styled from "styled-components";
 import { defaultTheme } from "../../styles/themes/default";
 
-export const HomeContainer = styled.main``;
-
-export const BackgroundImage = styled.div`
+export const HomeContainer = styled.main`
   top: 6.5rem;
   position: absolute;
   width: 100%;
+  `;
+
+export const BackgroundImage = styled.div`
   height: 40rem;
   background-image: url("../src/assets/Background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(50px);
+  filter: blur(100px);
 `;
 
 export const IntroductionSection = styled.section`
-  top: 6.5rem;
+  top: 0;
   height: 40rem;
   width: 100%;
   position: absolute;
@@ -95,4 +96,19 @@ export const ItemIcon = styled.span<ItensBackgroundColor>`
   border-radius: 100%;
   color: ${(props) => props.theme["background"]};
   background: ${props => props.theme[props.itensBackgroudColor]};
+`;
+
+export const CoffeeSection = styled.section`
+  padding: 2rem 15rem;
+
+  display: grid;
+  
+  /* grid-auto-rows: 19.375rem;
+  grid-template-columns: repeat(4, minmax(19.375rem, auto));
+  grid-gap: 2rem; */
+;
+  h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 2rem;
+  }
 `;
