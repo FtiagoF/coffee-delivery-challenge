@@ -7,7 +7,8 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    
+    background: ${props => props.theme['background']};
+    z-index: 2;
     nav {
         display: flex;
         gap: 0.75rem;

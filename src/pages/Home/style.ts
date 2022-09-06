@@ -68,6 +68,7 @@ export const Title = styled.div`
 
 export const Itens = styled.div`
   flex: 1;
+
   ul {
     list-style: none;
     display: grid;
@@ -100,15 +101,18 @@ export const ItemIcon = styled.span<ItensBackgroundColor>`
 
 export const CoffeeSection = styled.section`
   padding: 2rem 15rem;
-
-  display: grid;
-  
-  /* grid-auto-rows: 19.375rem;
-  grid-template-columns: repeat(4, minmax(19.375rem, auto));
-  grid-gap: 2rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 ;
   h2 {
     font-family: "Baloo 2", cursive;
     font-size: 2rem;
   }
+`;
+
+export const CoffeeList = styled.div`
+  display: grid;
+  grid-gap: 2.5rem ;
+  grid-template: auto / repeat(auto-fit, minmax(16rem, 1fr));
 `;

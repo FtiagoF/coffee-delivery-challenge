@@ -1,6 +1,6 @@
 import { Coffee, Package, ShoppingCartSimple, Timer } from "phosphor-react";
 import { CoffeeCard } from "./components/CoffeeCard/Index";
-import { BackgroundImage, CoffeeSection, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
+import { BackgroundImage, CoffeeList, CoffeeSection, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
 
 export function Home() {
     return (
@@ -26,7 +26,16 @@ export function Home() {
 
                 </IntroductionSection>
                 <CoffeeSection>
-                    <CoffeeCard />
+                    <h2>Nossos cafés</h2>
+            
+                    <CoffeeList>
+                        <CoffeeCard />
+                        <CoffeeCard />
+                        <CoffeeCard />
+                        <CoffeeCard />
+                        <CoffeeCard />
+                        
+                    </CoffeeList>
 
                     
 

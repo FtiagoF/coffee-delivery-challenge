@@ -1,6 +1,6 @@
 import { CardContainer, CardFooter, CardHeader, Counter } from "./style";
 import coffee from "../../../../assets/Coffees/Expresso.svg";
-import { Plus, ShoppingCart } from "phosphor-react";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
 export function CoffeeCard() {
   return (
@@ -15,13 +15,16 @@ export function CoffeeCard() {
         <span>9,90</span>
         <form>
           <Counter>
-            <Plus size={16} weight="fill" />
-            <input type="button" value="" />
-            <span>1</span>
-            <input type="button" value="" />
-            </Counter>
+            <button aria-hidden="true">
+              <Plus size={16} weight="bold" />
+            </button>
+            <input type="number" min={1} value={1} readOnly/>
+            <button aria-hidden="true">
+                <Minus size={16} weight="bold" />
+            </button>
+          </Counter>
           <button type="submit">
-            <ShoppingCart size={16} weight="fill" />
+            <ShoppingCart size={22} weight="fill" />
           </button>
         </form>
       </CardFooter>
