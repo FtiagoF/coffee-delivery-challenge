@@ -1,38 +1,63 @@
-import { CardContainer, CardFooter, CardHeader, Counter } from "./style";
+import { Container, Footer, Header, Counter, Tags } from "./style";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { CoffeeType } from "../../Coffees/Coffee";
+import { useState } from "react";
 
+export function CoffeeCard({
+  description,
+  name,
+  picture,
+  price,
+  tags,
+}: CoffeeType) {
+  const [counter, setCounter] = useState(1);
 
-export function CoffeeCard({description, name, picture, price, tag}: CoffeeType) {
-  console.log(tag);
-  
   return (
-    <CardContainer>
-      <CardHeader>
+    <Container>
+      <Header>
         <img src={`../../../src/assets/Coffees/${picture}`} alt="" />
-        <span>{tag}</span>
-      </CardHeader>
+        <Tags>
+          {tags.map((tag) => (
+            <span>{tag}</span>
+          ))}
+        </Tags>
+      </Header>
       <h1>{name}</h1>
       <p>{description}</p>
-      <CardFooter>
+      <Footer>
         <span>
-          {`${String(price).split('.')[0]}.${String(price).split('.')[1].padEnd(2,'0')}`}
+          {`${String(price).split(".")[0]}.${String(price)
+            .split(".")[1]
+            .padEnd(2, "0")}`}
         </span>
-        <form>
+        <form >
           <Counter>
-            <button aria-hidden="true">
-              <Plus size={16} weight="bold" />
+            <button
+            type="button"
+              aria-hidden="true"
+              onClick={() => {
+                setCounter(counter - 1);
+              }}
+            >
+              <Minus size={16} weight="bold" />
             </button>
-            <input type="number" min={1} value={1} readOnly/>
-            <button aria-hidden="true">
-                <Minus size={16} weight="bold" />
+            <input type="number" min={1} value={counter} readOnly />
+
+            <button
+              type="button"
+              aria-hidden="true"
+              onClick={() => {
+                setCounter(counter + 1);
+              }}
+            >
+              <Plus size={16} weight="bold" />
             </button>
           </Counter>
           <button type="submit">
             <ShoppingCart size={22} weight="fill" />
           </button>
         </form>
-      </CardFooter>
-    </CardContainer>
+      </Footer>
+    </Container>
   );
 }

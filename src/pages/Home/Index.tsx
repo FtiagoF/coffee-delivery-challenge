@@ -37,7 +37,7 @@ export function Home() {
                                 name={coffee.name}
                                 picture={coffee.picture}
                                 price={coffee.price}
-                                tag={coffee.tag}
+                                tags={coffee.tags}
                             />
                         ))}
                         

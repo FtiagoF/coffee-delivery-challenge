@@ -25,6 +25,7 @@ const BaseHeaderButton = styled.button`
     gap: 0.25rem;
     font-size: 0.875rem;
     cursor: pointer;
+    border: 1px solid transparent;
 `;
 
 export const LocationButton = styled(BaseHeaderButton)`

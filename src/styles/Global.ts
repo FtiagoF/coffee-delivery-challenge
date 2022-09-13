@@ -15,7 +15,6 @@ export const Globalstyle = createGlobalStyle`
 
     :focus {
         outline: 0;
-        border: 1px solid ${props => props.theme['yellow-dark']};
     }
 
     body, input, button, textarea {

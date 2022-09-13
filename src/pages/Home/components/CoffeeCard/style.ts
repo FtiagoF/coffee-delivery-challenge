@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardHeader = styled.div`
+export const Header = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -46,7 +46,14 @@ export const CardHeader = styled.div`
   }
 `;
 
-export const CardFooter = styled.div`
+export const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+`;
+
+
+export const Footer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -79,6 +86,7 @@ export const CardFooter = styled.div`
       border: none;
       background-color: ${(props) => props.theme["purple-dark"]};
       color: ${props => props.theme['white']};
+      cursor: pointer;
     }
   }
 `;
@@ -98,6 +106,7 @@ export const Counter = styled.div`
     background: transparent;
     border: none;
     color: ${props => props.theme['purple']};
+    cursor: pointer;
   }
 
   input {
