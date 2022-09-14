@@ -1,8 +1,8 @@
 export interface CoffeeType {
     name: string;
-    description: string;
+    description?: string;
     picture: string;
-    tags: string[];
+    tags?: string[];
     price: number;
 }
 
