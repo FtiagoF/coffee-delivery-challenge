@@ -1,14 +1,15 @@
 import { createContext, ReactNode, useState } from "react";
 import { CoffeeType } from "../pages/Home/Coffees/Coffee";
 
-interface ItemsProps {
+interface ItemProps {
   amount: number;
   coffee: CoffeeType;
-};
+}
 
 interface CartContextType {
-  items: ItemsProps[];
-  addItemsToCart: (el: any) => void;
+  cartList: ItemProps[];
+  addItemsToCart: (itemToAdd: ItemProps) => void;
+  removeItemsToCart: (coffeeName: string) => void;
 }
 
 export const CartContext = createContext({} as CartContextType);
@@ -18,17 +19,35 @@ interface CartContextProviderProps {
 }
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
-  const [items, setItems] = useState<ItemsProps[]>([]);
+  const [cartList, setCartList] = useState<ItemProps[]>([]);
+  console.log(cartList);
 
-  function addItemsToCart(el: ItemsProps) {
-    setItems([...items, el]);
+  function addItemsToCart(itemToAdd: ItemProps) {
+    const isCoffeeAlreadyInCart =
+      cartList.findIndex(
+        (item) => item.coffee.name === itemToAdd.coffee.name
+      ) != -1;
+
+    if (isCoffeeAlreadyInCart) {
+      let listWithChangedOne = cartList.map(item => {
+        if(item.coffee.name === itemToAdd.coffee.name){
+          return itemToAdd;
+        }
+        return item;
+      });
+      
+      setCartList(listWithChangedOne);
+    }else{
+      setCartList([...cartList, itemToAdd])
+    }
   }
 
-  console.log(items);
-  
+  function removeItemsToCart(coffeeName: string) {}
 
   return (
-    <CartContext.Provider value={{ items, addItemsToCart }}>
+    <CartContext.Provider
+      value={{ cartList, addItemsToCart, removeItemsToCart }}
+    >
       {children}
     </CartContext.Provider>
   );

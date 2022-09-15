@@ -12,7 +12,6 @@ export function App() {
       <CartContextProvider>
         <BrowserRouter>
           <Router />
-          
           <Globalstyle />
         </BrowserRouter>
       </CartContextProvider>

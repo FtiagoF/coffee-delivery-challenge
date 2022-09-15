@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   height: 19.375rem;
   padding: 0 1.5rem 1.25rem;
   background: ${(props) => props.theme["base-card"]};
@@ -15,13 +15,13 @@ export const Container = styled.div`
     font-size: 1.25rem;
     font-family: "Baloo 2", cursive;
     font-weight: 800;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${(props) => props.theme["base-subtitle"]};
   }
 
   p {
     font-size: 0.875rem;
     text-align: center;
-    color: ${props => props.theme['base-label']};
+    color: ${(props) => props.theme["base-label"]};
   }
 `;
 
@@ -52,7 +52,6 @@ export const Tags = styled.div`
   gap: 0.25rem;
 `;
 
-
 export const Footer = styled.div`
   display: flex;
   align-items: center;
@@ -62,7 +61,7 @@ export const Footer = styled.div`
     font-family: "Baloo 2", cursive;
     font-weight: 800;
     font-size: 1.5rem;
-    color: ${props => props.theme['base-text']};
+    color: ${(props) => props.theme["base-text"]};
     display: flex;
     gap: 0.25rem;
     &::before {
@@ -85,8 +84,14 @@ export const Footer = styled.div`
       border-radius: 6px;
       border: none;
       background-color: ${(props) => props.theme["purple-dark"]};
-      color: ${props => props.theme['white']};
+      color: ${(props) => props.theme["white"]};
       cursor: pointer;
+
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: ${(props) => props.theme["purple"]};
+      }
     }
   }
 `;
@@ -97,7 +102,7 @@ export const Counter = styled.div`
   border-radius: 6px;
   background: ${(props) => props.theme["base-button"]};
   font-size: 1.25rem;
-  
+  justify-content: space-between;
 
   button {
     display: flex;
@@ -105,8 +110,13 @@ export const Counter = styled.div`
     justify-content: center;
     background: transparent;
     border: none;
-    color: ${props => props.theme['purple']};
+    color: ${(props) => props.theme["purple"]};
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: ${(props) => props.theme["purple-dark"]};
+    }
   }
 
   input {
@@ -114,7 +124,7 @@ export const Counter = styled.div`
     background: transparent;
     text-align: center;
     border: none;
-    color: ${props => props.theme['base-title']};
+    color: ${(props) => props.theme["base-title"]};
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

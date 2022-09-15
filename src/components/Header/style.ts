@@ -36,4 +36,20 @@ export const LocationButton = styled(BaseHeaderButton)`
 export const CartButton = styled(BaseHeaderButton)`
     background: ${props => props.theme['yellow-light']};
     color: ${props => props.theme['yellow-dark']};
+    position: relative;
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        font-weight: bold;
+        background: ${props => props.theme['yellow-dark']};
+        color: ${props => props.theme['white']};
+        width: 1.25rem;
+        height: 1.25rem;
+        position: absolute;
+        right: calc(0px - 1.25rem/2 );
+        top: calc(0px - 1.25rem/2 );
+    }
 `;
