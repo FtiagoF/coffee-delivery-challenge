@@ -3,6 +3,7 @@ import CoffeeDeliveryLogo from '../../assets/logo.svg'
 import { MapPin, ShoppingCartSimple } from "phosphor-react";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { Link } from 'react-router-dom'
 
 export function Header() {
 
@@ -17,8 +18,10 @@ export function Header() {
                     Novo Horizonte, SP
                 </LocationButton>
                 <CartButton>
-                    <ShoppingCartSimple size='1.375rem' weight="fill" />
-                    <span>{cartList?.length}</span>
+                    <Link to='/checkout'>
+                        <ShoppingCartSimple size='1.375rem' weight="fill" />
+                        <span>{cartList?.length}</span>
+                    </Link>
                 </CartButton>
             </nav>
         </HeaderContainer>

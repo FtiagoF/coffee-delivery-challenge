@@ -1,6 +1,6 @@
 import { Container, Footer, Header, Counter, Tags } from "./style";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
-import { CoffeeType } from "../../Coffees/Coffee";
+import { CoffeeType } from "../../Coffees/CoffeesItems";
 import { FormEvent, useContext, useState } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
 

@@ -1,5 +1,5 @@
 import { Coffee, Package, ShoppingCartSimple, Timer } from "phosphor-react";
-import { Coffees } from "./Coffees/Coffee";
+import { Coffees } from "./Coffees/CoffeesItems";
 import { CoffeeCard } from "./components/CoffeeCard/Index";
 import { BackgroundImage, CoffeeList, CoffeeSection, HomeContainer, IntroductionContent, IntroductionSection, ItemIcon, Itens, LogoImage, Title } from "./style";
 

@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
-import { CoffeeType } from "../pages/Home/Coffees/Coffee";
+import { CoffeeType } from "../pages/Home/Coffees/CoffeesItems";
 
 interface ItemProps {
   amount: number;

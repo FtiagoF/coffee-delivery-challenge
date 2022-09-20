@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
     width: 100%;
     padding: 2rem 15rem;
+    height: 6.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,6 +38,10 @@ export const CartButton = styled(BaseHeaderButton)`
     background: ${props => props.theme['yellow-light']};
     color: ${props => props.theme['yellow-dark']};
     position: relative;
+
+    a {
+        color: inherit;
+    }
 
     span {
         display: flex;
