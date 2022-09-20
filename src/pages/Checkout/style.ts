@@ -4,8 +4,9 @@ export const CheckoutContainer = styled.section`
   position: absolute;
   top: 6.5rem;
   width: 100%;
+  
   padding: 6.5rem 15rem;
-  min-height: calc(100vh - 6.5rem);
+  height: calc(100vh - 6.5rem);
 `;
 
 export const FinishOrder = styled.div`
@@ -24,6 +25,7 @@ export const FinishOrder = styled.div`
 export const FieldsGroup = styled.div`
   grid-column: span 7;
   display: flex;
+  
   flex-direction: column;
   gap: 0.75rem;
 `;
@@ -38,13 +40,19 @@ export const AdressFormContainer = styled.div`
   border-radius: 6px;
 `;
 
-export const Header = styled.header`
+export const BaseHeader = styled.header`
   display: flex;
   gap: 0.5rem;
+`;
 
+export const HeaderAdress = styled(BaseHeader)`
   svg {
-    color: ${props => props.theme['yellow-dark']}
+    color: ${props => props.theme['yellow-dark']};
   }
+`;
+
+export const HeaderPayment = styled(BaseHeader)`
+  color: ${props => props.theme['purple']};
 `;
 
 export const HeaderText = styled.div`
@@ -58,6 +66,7 @@ export const HeaderText = styled.div`
   }
    
   p {
+    font-size: 0.875rem;
     color: ${props => props.theme['base-text']};
   }
 `;
@@ -90,15 +99,57 @@ export const AdressFormInput = styled.input`
 `;
 
 export const Payment = styled.div`
-  background-color: green;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 2.5rem;
   background: ${(props) => props.theme["base-card"]};
   border-radius: 6px;
 `;
 
+export const PaymentOptions = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  flex: 1;
+`;
+
+export const PaymentButton = styled.button`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: ${(props) => props.theme["base-text"]};
+  background: ${(props) => props.theme["base-button"]};
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+
+  svg {
+    color: ${props => props.theme['purple']};
+  }
+
+  &:focus  {
+    background: ${(props) => props.theme["purple-light"]};
+    border-color: ${(props) => props.theme["purple"]};
+  }
+  
+`;
+
 export const SelectedCoffees = styled.div`
   grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 85%;
+`;
+
+export const CoffeeCard = styled.div`
   background: ${(props) => props.theme["base-card"]};
   border-radius: 6px;
+  height: 100%;
 `;

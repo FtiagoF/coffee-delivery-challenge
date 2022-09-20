@@ -104,7 +104,7 @@ export const CoffeeSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-;
+
   h2 {
     font-family: "Baloo 2", cursive;
     font-size: 2rem;
