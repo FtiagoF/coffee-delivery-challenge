@@ -6,7 +6,7 @@ export const CheckoutContainer = styled.section`
   width: 100%;
   
   padding: 6.5rem 15rem;
-  height: calc(100vh - 6.5rem);
+  min-height: calc(100vh - 6.5rem);
 `;
 
 export const FinishOrder = styled.div`
@@ -148,8 +148,8 @@ export const SelectedCoffees = styled.div`
   height: 85%;
 `;
 
-export const CoffeeCard = styled.div`
+export const CoffeeCardList = styled.div`
   background: ${(props) => props.theme["base-card"]};
   border-radius: 6px;
-  height: 100%;
+  padding: 2.5rem;
 `;

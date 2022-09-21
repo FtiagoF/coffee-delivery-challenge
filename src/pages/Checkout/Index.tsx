@@ -1,4 +1,5 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { CoffeeCard } from "./components/CoffeeCard/Index";
 import {
   AdressFormContainer,
   CheckoutContainer,
@@ -10,7 +11,7 @@ import {
   AdressForm,
   AdressFormRow,
   AdressFormInput,
-  CoffeeCard,
+  CoffeeCardList,
   PaymentOptions,
   PaymentButton,
   HeaderAdress,
@@ -64,7 +65,9 @@ export function Checkout() {
         </FieldsGroup>
         <SelectedCoffees>
           <h3>Cafés selecionados</h3>
-          <CoffeeCard>Cafés selecionados</CoffeeCard>
+          <CoffeeCardList>
+            <CoffeeCard />
+          </CoffeeCardList>
         </SelectedCoffees>
       </FinishOrder>
     </CheckoutContainer>

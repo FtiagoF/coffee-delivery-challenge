@@ -1,8 +1,9 @@
-import { Container, Footer, Header, Counter, Tags } from "./style";
+import { Container, Footer, Header, Tags } from "./style";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { CoffeeType } from "../../Coffees/CoffeesItems";
 import { FormEvent, useContext, useState } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
+import { Counter } from "../../../../components/Counter/Index";
 
 export function CoffeeCard({description, name, picture, price, tags}: CoffeeType) {
   const [amount, setAmount] = useState(1);
@@ -42,29 +43,7 @@ export function CoffeeCard({description, name, picture, price, tags}: CoffeeType
           {`${String(price).split(".")[0]}.${String(price).split(".")[1].padEnd(2, "0")}`}
         </span>
         <form onSubmit={handleAddCoffeeToCart}>
-          <Counter>
-            <button
-              
-              type="button"
-              aria-hidden="true"
-              onClick={() => {
-                handleDecreaseAmount();
-              }}
-            >
-              <Minus size={16} weight="bold" />
-            </button>
-            <input type="number" min={1} value={amount} readOnly />
-
-            <button
-              type="button"
-              aria-hidden="true"
-              onClick={() => {
-                handleIncreaseAmount();
-              }}
-            >
-              <Plus size={16} weight="bold" />
-            </button>
-          </Counter>
+          <Counter />
           <button type="submit">
             <ShoppingCart size={22} weight="fill" />
           </button>
