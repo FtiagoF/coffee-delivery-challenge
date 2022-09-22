@@ -1,15 +1,19 @@
 import { Actions, CoffeeCardContainer, Details, Info, Price, RemoveButton } from "./style";
-import coffee from '../../../../assets/Coffees/Americano.svg'
 import { Counter } from "../../../../components/Counter/Index";
 import { Trash } from "phosphor-react";
+import { CoffeeType } from "../../../Home/Coffees/CoffeesItems";
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+    coffee: CoffeeType
+}
+
+export function CoffeeCard({coffee}: CoffeeCardProps) {
     return (
         <CoffeeCardContainer>
             <Info>
-                <img src={coffee} alt="" />
+                <img src={coffee.picture} alt="" />
                 <Details>
-                    <p>Expresso Tradicional</p>
+                    <p>{coffee.name}</p>
                     <Actions>
                         <Counter />
                         <RemoveButton>

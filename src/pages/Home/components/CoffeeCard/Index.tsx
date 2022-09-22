@@ -28,7 +28,7 @@ export function CoffeeCard({description, name, picture, price, tags}: CoffeeType
   return (
     <Container>
       <Header>
-        <img src={`../../../src/assets/Coffees/${picture}`} alt="" />
+        <img src={picture} alt={name} />
         <Tags>
           {tags ? tags.map((tag) => (
             <span key={tag}>{tag}</span>

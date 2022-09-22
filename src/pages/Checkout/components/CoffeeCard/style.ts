@@ -39,6 +39,8 @@ export const RemoveButton = styled.div`
   padding: 0 0.5rem;
   border-radius: 6px;
   font-size: 0.75rem;
+    cursor: pointer;
+
   svg {
     color: ${(props) => props.theme["purple"]};
   }

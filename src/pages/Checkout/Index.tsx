@@ -1,4 +1,6 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 import { CoffeeCard } from "./components/CoffeeCard/Index";
 import {
   AdressFormContainer,
@@ -22,6 +24,8 @@ import {
 } from "./style";
 
 export function Checkout() {
+  const { cartList } = useContext(CartContext)
+
   return (
     <CheckoutContainer>
       <FinishOrder>
@@ -69,8 +73,12 @@ export function Checkout() {
         <SelectedCoffees>
           <h3>Cafés selecionados</h3>
           <CoffeeCardList>
-            <CoffeeCard />
-            <Divider />
+            {cartList.map(item => (
+              <>
+                <CoffeeCard coffee={item.coffee} key={item.coffee.name} />
+                <Divider />
+              </>
+            ))}
             <OrderSummary>
               <tr>
                 <td>Total de itens</td>

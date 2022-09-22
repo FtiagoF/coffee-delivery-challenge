@@ -5,7 +5,7 @@ export const CheckoutContainer = styled.section`
   top: 6.5rem;
   width: 100%;
 
-  padding: 6.5rem 15rem;
+  padding: 2rem 15rem;
   min-height: calc(100vh - 6.5rem);
 `;
 
@@ -128,9 +128,14 @@ export const PaymentButton = styled.button`
   border: 1px solid transparent;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 
   svg {
     color: ${(props) => props.theme["purple"]};
+  }
+
+  &:hover {
+    background: ${(props) => props.theme["base-hover"]};
   }
 
   &:focus {
@@ -156,7 +161,7 @@ export const CoffeeCardList = styled.div`
 `;
 
 export const Divider = styled.hr`
-  border-top: 1px solid ${(props) => props.theme["base-button"]};
+  border: 1px solid ${(props) => props.theme["base-button"]};
 `;
 
 export const OrderSummary = styled.table`
@@ -183,4 +188,15 @@ export const OrderSummary = styled.table`
 export const ConfirmOrder = styled.button`
   flex: 1;
   padding: 0.75rem 0;
+  border: none;
+  background: ${(props) => props.theme["yellow"]};
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: ${props => props.theme['white']};
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: ${(props) => props.theme["yellow-dark"]};
+  }
 `;
