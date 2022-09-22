@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CounterContainer = styled.div`
+  
   display: flex;
   padding: 0.5rem;
   border-radius: 6px;
@@ -24,12 +25,12 @@ export const CounterContainer = styled.div`
   }
 
   input {
-    width: 100%;
     background: transparent;
     text-align: center;
     border: none;
     color: ${(props) => props.theme["base-title"]};
-
+    width: 2rem;
+    
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;

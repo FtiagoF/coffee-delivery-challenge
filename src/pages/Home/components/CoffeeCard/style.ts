@@ -56,6 +56,8 @@ export const Footer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
+  justify-content: space-between;
 
   span {
     font-family: "Baloo 2", cursive;
@@ -75,7 +77,7 @@ export const Footer = styled.div`
   form {
     display: flex;
     gap: 0.5rem;
-
+    
     & > button {
       padding: 0.5rem;
       display: flex;

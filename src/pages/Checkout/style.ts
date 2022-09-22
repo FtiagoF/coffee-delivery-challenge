@@ -4,7 +4,7 @@ export const CheckoutContainer = styled.section`
   position: absolute;
   top: 6.5rem;
   width: 100%;
-  
+
   padding: 6.5rem 15rem;
   min-height: calc(100vh - 6.5rem);
 `;
@@ -14,18 +14,18 @@ export const FinishOrder = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   height: 100%;
-  
+
   h3 {
     font-family: "Baloo 2", cursive;
     font-size: 1.125rem;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${(props) => props.theme["base-subtitle"]};
   }
 `;
 
 export const FieldsGroup = styled.div`
   grid-column: span 7;
   display: flex;
-  
+
   flex-direction: column;
   gap: 0.75rem;
 `;
@@ -47,12 +47,12 @@ export const BaseHeader = styled.header`
 
 export const HeaderAdress = styled(BaseHeader)`
   svg {
-    color: ${props => props.theme['yellow-dark']};
+    color: ${(props) => props.theme["yellow-dark"]};
   }
 `;
 
 export const HeaderPayment = styled(BaseHeader)`
-  color: ${props => props.theme['purple']};
+  color: ${(props) => props.theme["purple"]};
 `;
 
 export const HeaderText = styled.div`
@@ -62,12 +62,12 @@ export const HeaderText = styled.div`
 
   h4 {
     font-weight: 400;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${(props) => props.theme["base-subtitle"]};
   }
-   
+
   p {
     font-size: 0.875rem;
-    color: ${props => props.theme['base-text']};
+    color: ${(props) => props.theme["base-text"]};
   }
 `;
 
@@ -130,14 +130,13 @@ export const PaymentButton = styled.button`
   cursor: pointer;
 
   svg {
-    color: ${props => props.theme['purple']};
+    color: ${(props) => props.theme["purple"]};
   }
 
-  &:focus  {
+  &:focus {
     background: ${(props) => props.theme["purple-light"]};
     border-color: ${(props) => props.theme["purple"]};
   }
-  
 `;
 
 export const SelectedCoffees = styled.div`
@@ -145,11 +144,43 @@ export const SelectedCoffees = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  height: 85%;
 `;
 
 export const CoffeeCardList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   background: ${(props) => props.theme["base-card"]};
-  border-radius: 6px;
+  border-radius: 6px 44px;
   padding: 2.5rem;
+`;
+
+export const Divider = styled.hr`
+  border-top: 1px solid ${(props) => props.theme["base-button"]};
+`;
+
+export const OrderSummary = styled.table`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  td {
+    white-space: nowrap;
+    color: ${(props) => props.theme["base-text"]};
+  }
+
+  td:first-child {
+    width: 100%;
+  }
+
+  tr:last-child {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: ${(props) => props.theme["base-subtitle"]};
+  }
+`;
+
+export const ConfirmOrder = styled.button`
+  flex: 1;
+  padding: 0.75rem 0;
 `;

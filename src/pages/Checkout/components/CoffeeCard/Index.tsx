@@ -1,6 +1,8 @@
-import { Actions, CoffeeCardContainer, Details, Info } from "./style";
+import { Actions, CoffeeCardContainer, Details, Info, Price, RemoveButton } from "./style";
 import coffee from '../../../../assets/Coffees/Americano.svg'
 import { Counter } from "../../../../components/Counter/Index";
+import { Trash } from "phosphor-react";
+
 export function CoffeeCard() {
     return (
         <CoffeeCardContainer>
@@ -10,11 +12,14 @@ export function CoffeeCard() {
                     <p>Expresso Tradicional</p>
                     <Actions>
                         <Counter />
-                        
+                        <RemoveButton>
+                            <Trash size={16} />
+                            REMOVER
+                        </RemoveButton>
                     </Actions>
                 </Details>
             </Info>
-            <span>R$ 9,90</span>
+            <Price>R$ 9,90</Price>
         </CoffeeCardContainer>
     )
 }

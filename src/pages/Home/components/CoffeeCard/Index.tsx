@@ -23,7 +23,6 @@ export function CoffeeCard({description, name, picture, price, tags}: CoffeeType
   function handleAddCoffeeToCart(event: FormEvent) {
     event.preventDefault();
     addItemsToCart({amount: amount, coffee: {name: name, picture: picture, price: price}});
-    
   }
 
   return (
@@ -46,6 +45,7 @@ export function CoffeeCard({description, name, picture, price, tags}: CoffeeType
           <Counter />
           <button type="submit">
             <ShoppingCart size={22} weight="fill" />
+            
           </button>
         </form>
       </Footer>

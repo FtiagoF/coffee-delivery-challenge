@@ -39,12 +39,8 @@ export function Home() {
                                 price={coffee.price}
                                 tags={coffee.tags}
                             />
-                        ))}
-                        
+                        ))}      
                     </CoffeeList>
-
-                    
-
                 </CoffeeSection>
         </HomeContainer>
     )

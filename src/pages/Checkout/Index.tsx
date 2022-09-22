@@ -16,6 +16,9 @@ import {
   PaymentButton,
   HeaderAdress,
   HeaderPayment,
+  Divider,
+  OrderSummary,
+  ConfirmOrder,
 } from "./style";
 
 export function Checkout() {
@@ -67,6 +70,22 @@ export function Checkout() {
           <h3>Cafés selecionados</h3>
           <CoffeeCardList>
             <CoffeeCard />
+            <Divider />
+            <OrderSummary>
+              <tr>
+                <td>Total de itens</td>
+                <td>R$ 9.90</td>
+              </tr>
+              <tr>
+                <td>Entrega</td>
+                <td>R$ 3.50</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>R$ 9.90</td>
+              </tr>
+            </OrderSummary>
+            <ConfirmOrder>CONFIRMAR PEDIDO</ConfirmOrder>
           </CoffeeCardList>
         </SelectedCoffees>
       </FinishOrder>
