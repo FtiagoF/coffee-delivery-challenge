@@ -9,7 +9,7 @@ interface ItemProps {
 interface CartContextType {
   cartList: ItemProps[];
   addItemsToCart: (itemToAdd: ItemProps) => void;
-  removeItemsToCart: (coffeeName: string) => void;
+  removeItemFromCart: (coffeeName: string) => void;
 }
 
 export const CartContext = createContext({} as CartContextType);
@@ -42,11 +42,14 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
   }
 
-  function removeItemsToCart(coffeeName: string) {}
+  function removeItemFromCart(coffeeName: string) {
+    let cartListWithoutRemovedOne = cartList.filter(item => item.coffee.name !== coffeeName);
+    setCartList(cartListWithoutRemovedOne)
+  }
 
   return (
     <CartContext.Provider
-      value={{ cartList, addItemsToCart, removeItemsToCart }}
+      value={{ cartList, addItemsToCart, removeItemFromCart }}
     >
       {children}
     </CartContext.Provider>

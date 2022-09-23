@@ -18,14 +18,13 @@ import {
   PaymentButton,
   HeaderAdress,
   HeaderPayment,
-  Divider,
   OrderSummary,
   ConfirmOrder,
 } from "./style";
 
 export function Checkout() {
   const { cartList } = useContext(CartContext)
-
+  
   return (
     <CheckoutContainer>
       <FinishOrder>
@@ -57,41 +56,42 @@ export function Checkout() {
           </AdressFormContainer>
           <Payment>
             <HeaderPayment>
-                <CurrencyDollar size={22} weight="light" />
+              <CurrencyDollar size={22} weight="light" />
               <HeaderText>
                 <h4>Pagamento</h4>
                 <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
               </HeaderText>
             </HeaderPayment>
             <PaymentOptions>
-                <PaymentButton><CreditCard size={32} />Cartão de crédito</PaymentButton>
-                <PaymentButton><Bank size={32} />Cartão de débito</PaymentButton>
-                <PaymentButton><Money size={32} />Dinheiro</PaymentButton>
+              <PaymentButton><CreditCard size={32} />Cartão de crédito</PaymentButton>
+              <PaymentButton><Bank size={32} />Cartão de débito</PaymentButton>
+              <PaymentButton><Money size={32} />Dinheiro</PaymentButton>
             </PaymentOptions>
           </Payment>
         </FieldsGroup>
         <SelectedCoffees>
           <h3>Cafés selecionados</h3>
           <CoffeeCardList>
-            {cartList.map(item => (
-              <>
+            {cartList?.map(item => (
                 <CoffeeCard coffee={item.coffee} key={item.coffee.name} />
-                <Divider />
-              </>
+                
             ))}
             <OrderSummary>
-              <tr>
-                <td>Total de itens</td>
-                <td>R$ 9.90</td>
-              </tr>
-              <tr>
-                <td>Entrega</td>
-                <td>R$ 3.50</td>
-              </tr>
-              <tr>
-                <td>Total</td>
-                <td>R$ 9.90</td>
-              </tr>
+              <tbody>
+
+                <tr>
+                  <td>Total de itens</td>
+                  <td>R$ 9.90</td>
+                </tr>
+                <tr>
+                  <td>Entrega</td>
+                  <td>R$ 3.50</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>R$ {cartList.map(item => item.amount).reduce((prev, curr) => prev + curr, 0) + 3.5}</td>
+                </tr>
+              </tbody>
             </OrderSummary>
             <ConfirmOrder>CONFIRMAR PEDIDO</ConfirmOrder>
           </CoffeeCardList>

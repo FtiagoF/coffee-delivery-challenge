@@ -51,3 +51,7 @@ export const Price = styled.span`
     font-weight: 800;
     color: ${(props) => props.theme["base-text"]};
 `;
+
+export const Divider = styled.hr`
+  border: 1px solid ${(props) => props.theme["base-button"]};
+`;

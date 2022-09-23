@@ -160,10 +160,6 @@ export const CoffeeCardList = styled.div`
   padding: 2.5rem;
 `;
 
-export const Divider = styled.hr`
-  border: 1px solid ${(props) => props.theme["base-button"]};
-`;
-
 export const OrderSummary = styled.table`
   display: flex;
   flex-direction: column;
